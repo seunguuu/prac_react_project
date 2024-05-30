@@ -3,7 +3,7 @@ import { getBoards } from "../../http/http";
 
 // export default function Requirement({ token }) {
 export default function Requirement() {
-  let array = [1, 2, 3, 4, 5];
+  let array = [" A", " B", " C", " D", " E"];
 
   // const [boards, setBoards] = useState();
 
@@ -27,7 +27,7 @@ export default function Requirement() {
       {/** 토큰이 있고, 게시글을 선택하지 않았을 때 */}
       <>
         {/* <div>총 {boards}개의 요구사항이 검색되었습니다.</div> */}
-        <div>총 ?개의 요구사항이 검색되었습니다.</div>
+        <div>총 {array.length}개의 요구사항이 검색되었습니다.</div>
         <table>
           <thead>
             <tr>
@@ -53,8 +53,10 @@ export default function Requirement() {
           </tbody>
         </table>
       </>
-
-      <button style={{ textAlign: "right" }}>버튼</button>
+      <div className="button-area right-align">
+        <button>삭제</button>
+        <button>요구사항 생성</button>
+      </div>
     </>
   );
 }
